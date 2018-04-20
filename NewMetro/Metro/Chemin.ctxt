@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Chemin
+comment0.text=\n\ Write\ a\ description\ of\ class\ Chemin\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
+comment1.params=
+comment1.target=Chemin()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Chemin\n
+comment2.params=distance\ ligne\ direction
+comment2.target=Chemin(int,\ int,\ java.lang.String)
+comment3.params=distance
+comment3.target=void\ setDistance(int)
+comment4.params=ligne
+comment4.target=void\ setLigne(int)
+comment5.params=direction
+comment5.target=void\ setDirection(java.lang.String)
+comment6.params=
+comment6.target=int\ getDistance()
+comment7.params=
+comment7.target=int\ getLigne()
+comment7.text=\n\ \n
+comment8.params=
+comment8.target=java.lang.String\ getDirection()
+comment8.text=\n\ \n
+comment9.params=
+comment9.target=java.lang.String\ affichage()
+numComments=10

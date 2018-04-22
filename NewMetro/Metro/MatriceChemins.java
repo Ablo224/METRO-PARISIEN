@@ -56,7 +56,6 @@ public class MatriceChemins
      */
     public  void remplireMatrice(String monFichier) throws IOException, NoSuchElementException, NullPointerException
     {
-        
         String index;
         int distance, id1, id2;
         String nomArc;
@@ -74,50 +73,18 @@ public class MatriceChemins
                 {
                     scanner.nextLine();
                 }
-                
                 else if(index.equals("E"))
                 {
                      id1 = scanner.nextInt();
                      id2 = scanner.nextInt();
                      distance = scanner.nextInt();
                      nomArc = scanner.nextLine();
-                  
                      matrice[id1][id2]= new Chemin(distance, nomArc);
                      succ[id1].add(id2);
-                    
                 }
-              
-                
             }
             fs.close();
             scanner.close();
-           
         }
-        
-            
     }
-    
-    
-    
-    /*public static void main(String[] args)
-    {
-        try{
-        MatriceChemins matrice;
-        matrice = new MatriceChemins(383);
-        remplireMatrice("metro.txt");
-        }
-        catch(IOException e)
-        {
-            System.out.println(e.getMessage());
-        }
-        catch(NoSuchElementException e)
-        {
-            System.out.println("ici "+e.getMessage());
-        }
-        catch(NullPointerException e)
-        {
-            System.out.println("ici "+e.getMessage());
-        }
-    }*/
-        
 }

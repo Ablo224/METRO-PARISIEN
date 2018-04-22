@@ -22,7 +22,6 @@ public class Dijkstra {
     int[] pred; // tableau de pere ***
     boolean[] traiter; //  ***
     PriorityQueue<Noeud> nonTraiter;
-    //int steps = 0;
 
     // constructeur
     public Dijkstra(MatriceChemins g, ListeSommets ls, int source, int   dest)
@@ -48,14 +47,11 @@ public class Dijkstra {
         this.pred[this.source] = this.source; // source est sont propre père
         nonTraiter = new PriorityQueue<Noeud>();
         nonTraiter.add( new Noeud(this.source, 0) );
-        //System.out.println(dist[this.dest]+" "+settled[this.dest]);
      }
      
     // mise a jour de la distance, de la priorite, et du predecesseur d'un sommet
     public void update(int y, int x)
     {
-        //throw new Error("a completer");
-        //if(settled[y])
         int distance = g.matrice[x][y].distance; 
         if( dist[y] > dist[x] + distance){
             dist[y] = dist[x] + distance;
@@ -64,7 +60,7 @@ public class Dijkstra {
         }
     }
     
-    // trouve le prochain sommet de nonTraiter non traite
+    // trouve le prochain sommet  nonTraiter à traite
     public int nextNoeud()
     {
         
@@ -94,11 +90,8 @@ public class Dijkstra {
     // algorithme de Dijkstra complet
     public int distancePlusCourtChemin()
     {
-        //throw new Error("a completer");
         int sommet = source;
-        //System.out.println("ici");
-        while( sommet != dest && sommet != -1){//&& sommet != -1){
-            //System.out.println("ici");
+        while( sommet != dest && sommet != -1){
              sommet = uneEtape();
         }
         if(sommet == -1){
@@ -121,64 +114,67 @@ public class Dijkstra {
     
     public void itineraire()
     {
-        //System.out.println(this.listeSommet.tabSommet[ this.pred[this.dest] ] );
-        //ArrayList<Integer> itineraire = new ArrayList<Integer>();
         this.itineraire.add(this.dest);
         int id = this.pred[this.dest];
-        //System.out.println(listeSommet.tabSommet[ this.dest ]);
         while(id != this.source)
-        {
-            
+        { 
             this.itineraire.add(id);
-            //System.out.println(listeSommet.tabSommet[ id ]);
             id = this.pred[id];
-            
-        //itineraire.add(this.source);
-        //return itineraire;
-       }
+        }
        itineraire.add(id);
-       //return itineraire;
-       //System.out.println(listeSommet.tabSommet[ id ]);
     }
     
-    // A terminer
     public void afficher()
     {
-        //System.out.print("ici");
-        int sommet, sommet1;
-       // ligne = 0;
+    	 int sommet, sommet1;
+    	if(this.source == this.dest)
+    	{
+    		System.out.println("Le depart est égal à la source, vous y êtes déjà."); return;
+    	}
+       
         ListIterator<Integer> it = this.itineraire.listIterator(this.itineraire.size());
+        
         while(it.hasPrevious())
         {
             sommet = it.previous();
-            //sommet1 = it.previous();
-            //ligne = g.matrice[sommet][sommet1].getLigne();
             if(sommet == this.source)
             {
-                System.out.println("Vous êtes à "+listeSommet.tabSommet[ sommet ]);
+                System.out.println("\tVous êtes à "+listeSommet.tabSommet[ sommet ]);
                 sommet1 = it.previous();
-                //ligne = g.matrice[sommet][sommet1].getLigne();
-                System.out.println("Prenez la ligne "+g.matrice[sommet][sommet1].getDirection());
-                it.next();
+                if(g.matrice[sommet][sommet1].getArc().contains("Piste")==true)
+                {
+                	System.out.println("\tPrenez la "+g.matrice[sommet][sommet1].getArc());
+                }
+                else
+                {
+                	System.out.println("\tPrenez le "+g.matrice[sommet][sommet1].getArc());
+                }
+                
+               it.next();
             }
             else if(sommet == this.dest)
             {
-                System.out.print("vous devriez arriver à"+ listeSommet.tabSommet[ sommet ]+" dans ");
+                System.out.print("\n\tvous devriez arriver à"+ listeSommet.tabSommet[ sommet ]+" dans ");
             }
             
             else if(sommet != this.dest)
             {
                 
-                sommet1 = it.previous();                
-                    System.out.println("A"+listeSommet.tabSommet[ sommet ]+" continuer sur le "+g.matrice[sommet][sommet1].getDirection());
-                    //ligne = ligne1;
-     
-                
-                
-                   // System.out.println("\nA"+listeSommet.tabSommet[ sommet ]+" descendre et prendre la ligne "+g.matrice[sommet][sommet1].getDirection());
-                   // ligne = ligne1;
-     
-                    
+                sommet1 = it.previous();
+                if(g.matrice[sommet][sommet1].getArc().contains("Piste")==true)
+                {
+                    System.out.println("\tUne fois à"+listeSommet.tabSommet[sommet]+" continuer sur la "+g.matrice[sommet][sommet1].getArc());
+                }
+                else if(g.matrice[sommet][sommet1].getArc().contains("Skié")==true)
+                {
+                	System.out.println("\tUne fois à"+listeSommet.tabSommet[ sommet ]+" "+g.matrice[sommet][sommet1].getArc());
+                }
+                else
+                {
+                	System.out.println("\tUne fois à"+listeSommet.tabSommet[ sommet ]+" continuer sur le "+g.matrice[sommet][sommet1].getArc());
+                }
+                     
+                          
                 it.next();
                 
             }

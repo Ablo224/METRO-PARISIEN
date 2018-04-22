@@ -278,10 +278,10 @@ E 21 56 10 Piste Sellettes
 E 56 21 10 Piste Sellettes
 E 55 21 14 Piste Bois
 E 21 55 14 Piste Bois
-E 7 12 8 Skié
-E 12 7 8 Skié
-E 2 7 8 Skié
-E 7 2 8 Skié
+E 7 12 8 Piste Serre-Barbin
+E 12 7 8 Piste Serre-Barbin
+E 2 7 8 Piste Serre-Barbin
+E 7 2 8 Piste Serre-Barbin
 E 13 11 14 Piste Route-Fréjus
 E 39 40 16 Piste Chémin-Vauban
 E 39 70 12 Piste Yéti

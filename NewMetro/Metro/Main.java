@@ -24,7 +24,6 @@ public class Main
     
     public static int distanceMin(Dijkstra d, ListeSommets ls, MatriceChemins matrice)
     {
-        //d = new Dijkstra(matrice, ls.source[0], ls.destination[0]);
         int disMin = d.distancePlusCourtChemin();
         int distance = 2;
         for(int i=0; i<ls.nbSource; i++)
@@ -33,14 +32,12 @@ public class Main
                 {
                     return disMin;
                 }
-            //System.out.println("ici");
             for(int j=0; j<ls.nbDest; j++)
             {
                 if(ls.destination[i] == -1 )
                 {
                     break;
                 }
-                //System.out.println("ici");
                 Dijkstra newd = new Dijkstra(matrice,  ls, ls.source[i], ls.destination[j]);
                 distance = newd.distancePlusCourtChemin();
                 if(disMin > distance)
@@ -59,21 +56,26 @@ public class Main
     	String fichier=null;
     	int choix=0;
     	Scanner sc=new Scanner(System.in);
-    	System.out.println("1.Skieur débutant");
-    	System.out.println("2.Skieur expert");
+    	System.out.println("******* 1-Skieur débutant *******\n");
+    	System.out.println("******* 2-Skieur expert *********\n");
     	System.out.println("Faites votre choix:");
-    	choix = sc.nextInt();
-    	switch(choix)
+    	while(choix != 1 || choix != 2)
     	{
-    		case 1:
-    			fichier ="debutant.txt";
-    			return fichier;
-    		case 2:
-    			fichier ="expert.txt";
-    			return fichier;
-    		default:
-    			System.out.println("Mauvais choix");return fichier;
+    		
+    		choix = sc.nextInt();
+    		switch(choix)
+    		{
+    			case 1:
+    				fichier ="debutant.txt";
+    				return fichier;
+    			case 2:
+    				fichier ="expert.txt";
+    				return fichier;
+    			default:
+    				System.out.println("Faites un Bon choix:");
+    		}
     	}
+    	return fichier;
     }
     
     public static String[] sourceDestination()
@@ -86,11 +88,10 @@ public class Main
     	str[1] = sc.nextLine();
     	return str;
     }
-    
-    
-    public static void main(String[] args)
+   
+    public static void run()
     {
-        ListeSommets ls;
+    	ListeSommets ls;
         ls = new ListeSommets(71);
         MatriceChemins matrice;
         Dijkstra d;
@@ -100,22 +101,21 @@ public class Main
         str = sourceDestination();
         
 
-        // test
         try{
             matrice = new MatriceChemins(71);
             matrice.initialiser();
             matrice.remplireMatrice(file);
             ls.remplireTableauSommet(file);
             ls.idenSource(str[0]);
-            ls.idenDestination(str[1]);
+    		ls.idenDestination(str[1]);
            
             d = new Dijkstra(matrice, ls, ls.source[0], ls.destination[0]);
             
             disMin = distanceMin(d,ls, matrice);
             
             d.itineraire();// obtenir l'itineraire
-            d.afficher();
-            System.out.println(disMin/60 + " min "+ disMin%60 + " s");
+            d.afficher();//affiche l(itineraire
+            System.out.println(disMin + " min ");
             
         }catch(IOException e)
         {
@@ -125,5 +125,11 @@ public class Main
         {
             System.out.println(t.getMessage());
         }
+    	
+    }
+    
+    public static void main(String[] args)
+    {
+        run();
     }
 }

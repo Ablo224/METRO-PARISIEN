@@ -29,10 +29,10 @@ public class Chemin
         this.nomArc="";
     }
     
-    public Chemin(int distance, String direction)
+    public Chemin(int distance, String nomArc)
     {
         this.distance = distance;
-        this.nomArc= direction;
+        this.nomArc= nomArc;
     }
     
     
@@ -43,9 +43,9 @@ public class Chemin
     
     
     
-    public void setDirection(String direction)
+    public void setArc(String nomArc)
     {
-        this.nomArc = direction;
+        this.nomArc = nomArc;
     }
     
 
@@ -60,7 +60,7 @@ public class Chemin
     /**
      * 
      */
-    public String getDirection()
+    public String getArc()
     {
         return this.nomArc;
     }

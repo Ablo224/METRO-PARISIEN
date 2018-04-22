@@ -24,7 +24,6 @@ public class ListeSommets
     public final int nbSourceDest = 10;
     
     
-    /** A revoir */
     public int nbSommets;
 
     /**
@@ -56,7 +55,6 @@ public class ListeSommets
         
         String index;
          int i=0;
-        System.out.println(i);
         try( FileInputStream fs = new FileInputStream (new File(monFichier));
                 Scanner scanner = new Scanner(fs))
         {
@@ -64,27 +62,21 @@ public class ListeSommets
             while((scanner.hasNextLine())==true)
             {
                 index = scanner.next();
-                //System.out.println(index);
 
                 if(index.equals("#"))
                 {
                     scanner.nextLine();
                 }
-                
                 else if(index.equals("V"))
                 {
                      scanner.nextInt();
                      this.tabSommet[i] = scanner.nextLine();
-                     //System.out.println(this.tabSommet[i]);
-
                      i++;
                 }
                 else{break;}
             }
             fs.close();
             scanner.close();
-            System.out.println(i);
-
         }
     }
     

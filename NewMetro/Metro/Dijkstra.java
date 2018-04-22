@@ -37,14 +37,15 @@ public class Dijkstra {
         pred = new int [n];
         itineraire = new ArrayList<Integer>();
         traiter = new boolean [n];
-        for(int i=0; i<n; i++) {  // initialise les destance de la source au sommet i a infini 
-            dist[i] = Integer.MAX_VALUE;
-            pred[i] = -1;// initialise tableau de pere à -1
-            traiter[i] = false;//true si pas traité
+        for(int i=0; i<n; i++) {  // initialise les destance de la source au sommet i a infini
+        	
+        		dist[i] = Integer.MAX_VALUE;
+        		pred[i] = -1;// initialise tableau de pere à -1
+        		traiter[i] = false;//true si pas traité
         }
         
-        dist[this.source] = 0; // distance de la source à la source
-        pred[this.source] = this.source; // source est sont propre père
+        this.dist[this.source] = 0; // distance de la source à la source
+        this.pred[this.source] = this.source; // source est sont propre père
         nonTraiter = new PriorityQueue<Noeud>();
         nonTraiter.add( new Noeud(this.source, 0) );
         //System.out.println(dist[this.dest]+" "+settled[this.dest]);
@@ -144,8 +145,8 @@ public class Dijkstra {
     public void afficher()
     {
         //System.out.print("ici");
-        int sommet, sommet1,ligne,ligne1;
-        ligne = 0;
+        int sommet, sommet1;
+       // ligne = 0;
         ListIterator<Integer> it = this.itineraire.listIterator(this.itineraire.size());
         while(it.hasPrevious())
         {
@@ -156,8 +157,8 @@ public class Dijkstra {
             {
                 System.out.println("Vous êtes à "+listeSommet.tabSommet[ sommet ]);
                 sommet1 = it.previous();
-                ligne = g.matrice[sommet][sommet1].getLigne();
-                System.out.println("Prenez la ligne "+ligne+g.matrice[sommet][sommet1].getDirection());
+                //ligne = g.matrice[sommet][sommet1].getLigne();
+                System.out.println("Prenez la ligne "+g.matrice[sommet][sommet1].getDirection());
                 it.next();
             }
             else if(sommet == this.dest)
@@ -168,19 +169,15 @@ public class Dijkstra {
             else if(sommet != this.dest)
             {
                 
-                sommet1 = it.previous();
-                ligne1 = g.matrice[sommet][sommet1].getLigne();
-                if(ligne == ligne1)
-                {
-                    System.out.println("A"+listeSommet.tabSommet[ sommet ]+" continuer la ligne "+ligne1+" "+g.matrice[sommet][sommet1].getDirection());
-                    ligne = ligne1;
-                }
+                sommet1 = it.previous();                
+                    System.out.println("A"+listeSommet.tabSommet[ sommet ]+" continuer sur le "+g.matrice[sommet][sommet1].getDirection());
+                    //ligne = ligne1;
+     
                 
-                else
-                {
-                    System.out.println("\nA"+listeSommet.tabSommet[ sommet ]+" descendre et prendre la ligne "+ligne1+" "+g.matrice[sommet][sommet1].getDirection());
-                    ligne = ligne1;
-                }
+                
+                   // System.out.println("\nA"+listeSommet.tabSommet[ sommet ]+" descendre et prendre la ligne "+g.matrice[sommet][sommet1].getDirection());
+                   // ligne = ligne1;
+     
                     
                 it.next();
                 

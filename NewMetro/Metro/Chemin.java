@@ -14,9 +14,8 @@ public class Chemin
 {
     public int distance;
     
-    public int ligne;
     
-    public String direction;
+    public String nomArc;
     
   
     
@@ -27,15 +26,13 @@ public class Chemin
     public Chemin()
     {
         this.distance = 0;
-        this.ligne = 0;
-        this.direction ="";
+        this.nomArc="";
     }
     
-    public Chemin(int distance, int ligne, String direction)
+    public Chemin(int distance, String direction)
     {
         this.distance = distance;
-        this.ligne = ligne;
-        this.direction = direction;
+        this.nomArc= direction;
     }
     
     
@@ -44,14 +41,11 @@ public class Chemin
         this.distance = distance;
     }
     
-    public void setLigne(int ligne)
-    {
-        this.ligne = ligne;
-    }
+    
     
     public void setDirection(String direction)
     {
-        this.direction = direction;
+        this.nomArc = direction;
     }
     
 
@@ -61,24 +55,18 @@ public class Chemin
         return this.distance;
     }
     
-    /**
-     * 
-     */
-    public int getLigne()
-    {
-        return this.ligne;
-    }
+   
     
     /**
      * 
      */
     public String getDirection()
     {
-        return this.direction;
+        return this.nomArc;
     }
     
     public String affichage()
     {
-        return this.distance+" "+this.ligne+" "+this.direction;
+        return this.distance+" "+this.nomArc;
     }
 }

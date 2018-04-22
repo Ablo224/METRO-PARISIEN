@@ -59,30 +59,26 @@ public class Main
     public static void main(String[] args)
     {
         ListeSommets ls;
-        ls = new ListeSommets(383);
+        ls = new ListeSommets(70);
         MatriceChemins matrice;
         Dijkstra d;
         int disMin = Integer.MAX_VALUE;
 
-        // A terminer
         // test
         try{
-            matrice = new MatriceChemins(383);
+            matrice = new MatriceChemins(70);
             matrice.initialiser();
             matrice.remplireMatrice("metro.txt");
             ls.remplireTableauSommet("metro.txt");
            
-            ls.idenSource("Cité");
-            ls.idenDestination("Denfert Rochereau");
-            //ls.idenDestination("La Motte Picquet, Grenelle");
+            ls.idenSource("Col du Prorel");
+            ls.idenDestination("Col de la Ricelle");
            
             d = new Dijkstra(matrice, ls, ls.source[0], ls.destination[0]);
             
             disMin = distanceMin(d,ls, matrice);
             
             d.itineraire();// obtenir l'itineraire
-            //itineraire = d.itineraire();
-            //System.out.println(d.itineraire);
             d.afficher();
             System.out.println(disMin/60 + " min "+ disMin%60 + " s");
             

@@ -56,7 +56,7 @@ public class ListeSommets
         
         String index;
          int i=0;
-        
+        System.out.println(i);
         try( FileInputStream fs = new FileInputStream (new File(monFichier));
                 Scanner scanner = new Scanner(fs))
         {
@@ -64,7 +64,8 @@ public class ListeSommets
             while((scanner.hasNextLine())==true)
             {
                 index = scanner.next();
-             
+                //System.out.println(index);
+
                 if(index.equals("#"))
                 {
                     scanner.nextLine();
@@ -74,13 +75,16 @@ public class ListeSommets
                 {
                      scanner.nextInt();
                      this.tabSommet[i] = scanner.nextLine();
+                     //System.out.println(this.tabSommet[i]);
+
                      i++;
                 }
                 else{break;}
             }
             fs.close();
             scanner.close();
-            
+            System.out.println(i);
+
         }
     }
     
@@ -101,10 +105,12 @@ public class ListeSommets
         {
             if(this.tabSommet[i].equals(" "+source) )
             {
-                this.source[j++]= i;
+                this.source[j]= i;j++;
             }
         }
         this.nbSource = j;
+        
+      
     }
     
     public void idenDestination(String destination)
@@ -114,31 +120,12 @@ public class ListeSommets
         {
             if(this.tabSommet[i].equals(" "+destination))
             {
-                this.destination[j++]= i;
+                this.destination[j]= i;j++;
             }
         }
         this.nbDest = j;
+        
     }
-        
+} 
     
-    
-   /* public static void main(String[] args)
-    {
-        ListeSommets ls;
-        ls = new ListeSommets(384);
-        
-        try{
-            ls.remplireTableauSommet("metro.txt");
-            System.out.println(ls.getNbSommets());
-        }catch(IOException e)
-        {
-            System.out.println(e.getMessage());
-        }
-        catch(NoSuchElementException t)
-        {
-            System.out.println(t.getMessage());
-        }
-    }*/
-    
-    
-}
+  

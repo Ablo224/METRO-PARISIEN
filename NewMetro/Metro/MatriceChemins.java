@@ -16,13 +16,13 @@ public class MatriceChemins
     public  Chemin [][] matrice;
     public  int Taille;
     public ArrayList<Integer>[] succ; // successeurs de chaque sommet
-    //final protected ArrayList<Integer>[] pred; // predecesseurs de chaque sommet
     
     
 
     /**
      * Constructor for objects of class MatriceChemins
      */
+    @SuppressWarnings("unchecked") 
     public MatriceChemins(int taille)
     {
         
@@ -59,8 +59,7 @@ public class MatriceChemins
         
         String index;
         int distance, id1, id2;
-        int ligne;
-        String direction;
+        String nomArc;
         Chemin chemin;
         
         try( FileInputStream fs = new FileInputStream (new File(monFichier));
@@ -81,19 +80,10 @@ public class MatriceChemins
                      id1 = scanner.nextInt();
                      id2 = scanner.nextInt();
                      distance = scanner.nextInt();
-                     ligne = scanner.nextInt();
-                     direction = scanner.nextLine();
-                     
-                     /*matrice[id1][id2]=new Chemin();
-                     matrice[id1][id2].id1 = id1;
-                     matrice[id1][id2].id2 = id2;
-                     matrice[id1][id2].distance = distance;
-                     matrice[id1][id2].ligne = ligne;
-                     matrice[id1][id2].direction = direction;*/
-                     matrice[id1][id2]= new Chemin(distance, ligne, direction);
+                     nomArc = scanner.nextLine();
+                  
+                     matrice[id1][id2]= new Chemin(distance, nomArc);
                      succ[id1].add(id2);
-                     //System.out.println(id1+" "+id2+" "+distance+" "+ligne+" "+direction);
-                     //System.out.println(matrice[id1][id2].affichage()); // test
                     
                 }
               

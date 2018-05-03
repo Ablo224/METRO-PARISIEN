@@ -1,0 +1,296 @@
+# sommet de la station à SKI//
+# format : V num_sommet nom_sommer
+#   E num_sommet1 num_sommet1 temps_en_secondes  MONTÉES ou DESCENTES
+V 0000 Pas de l'ane
+V 0001 Bachas
+V 0002 Pré Chabert
+V 0003 Lauzières
+V 0004 Etoiles
+V 0005 Col de  l'eychauda
+V 0006 Pic de l'yret
+V 0007 Les Guibertes
+V 0008 Col de la Cucumelle
+V 0009 Col Méa
+V 0010 Méa
+V 0011 Village de Frejus
+V 0012 Moulin Travailleur
+V 0013 Chazeley
+V 0014 Mickey
+V 0015 Aravet
+V 0016 Fréjus
+V 0017 Côte de Gauthier
+V 0018 Clot de Gauthier
+V 0019 Creux du loup
+V 0020 L'Eychauda
+V 0021 Côte Chevalier 1
+V 0022 Lievre Blanc
+V 0023 Chantemerle
+V 0024 Côte Bletonet
+V 0025 Serre Ratier
+V 0026 Orée du Bois
+V 0027 Côte Chevalier 2
+V 0028 Serre Chevalier
+V 0029 Combes
+V 0030 Grand Alpe
+V 0031 Bois des Coqs
+V 0032 Col de la Ricelle
+V 0033 Aiguillette
+V 0034 Côte Aiguillette
+V 0035 Col du Prorel
+V 0036 Prorel
+V 0037 Rocher Blanc
+V 0038 Serre Pelat
+V 0039 Pra Long
+V 0040 Briançon
+V 0041 Cote de Chaume
+V 0042 Aya
+V 0043 Cote de Rochamout
+V 0044 Corvaria
+V 0045 Cote espagnols
+V 0046 Cote de Corvaria
+V 0047 Cote de Choucas
+V 0048 Cote de Col de L'Eychauda
+V 0049 Cote de Clot Méa
+V 0050 Cote de Pré Jeanne
+V 0051 La Cabane
+V 0052 Cote de Barres
+V 0053 La Prairie
+V 0054 Le Goulet
+V 0055 La Barres
+V 0056 Cote de Fréjus
+V 0057 La Casse du Boeuf
+V 0058 Sud-Ouest Clot Gauthier
+V 0059 Cote Alpage
+V 0060 Bas Alpage
+V 0061 Cote Champcella
+V 0062 La Champcella
+V 0063 Cote Replat
+V 0064 Cote Grand Alpe
+V 0065 La Briance
+V 0066 Centre Eduits
+V 0067 Cote Eduits
+V 0068 Cote de la Cabane du Berger
+V 0069 Clot Gaillard
+V 0070 Grande Gargouille
+E 1 0 5  télésiège de CIBOUIT
+E 1 6 7  télésiège de l'YRET
+E 1 5 7  télésiège de l'EYCHAUDA
+E 3 1 6  télésiège de LAUZIÈRES
+E 2 4 6  télésiège d'AYA
+E 2 1 9  télésiège de BACHAS
+E 42 41 5  télésiège de l'ETOILE
+E 5 8 4  télésiège de la CUCUMELLE
+E 17 18 8  télésiège de CLOT GAUTHIER
+E 11 8 10  télésiège de VALLONS
+E 12 53 9  télécabine de PONTILLAS
+E 53 16 4  télésiège de FRÉJUS
+E 13 16 11  télécabine de FRÉJUS
+E 16 52 6  téléski de la BARRES
+E 52 16 6  téléski de la BARRES
+E 10 49 4  téléski Méa-Clot
+E 49 10 4  téléski Méa-Clot
+E 49 9 3  téléski Méa
+E 9 49 3  téléski Méa
+E 16 54 2  téléski de la PRAIRIE
+E 54 16 2  téléski de la PRAIRIE
+E 51 16 6  téléski de la CRÊTES
+E 16 51 6  téléski de la CRÊTES
+E 14 21 12  télésiège de la CASSE DU BOEUF
+E 56 27 7  télésiège CÔTE CHEVELIER
+E 60 59 3  téléski ALPAGE
+E 59 60 3  téléski ALPAGE
+E 22 27 7  télésiège FORÊT
+E 15 22 7  télésiège ARAVET
+E 62 61 5  téléski CHAMPCELLA
+E 61 61 5  téléski CHAMPCELLA
+E 23 24 7  télésiège RATIER
+E 24 26 7  télésiège ORÉE DU BOIS
+E 24 28 10  télésiège SERRE CHEVALIER
+E 25 29 8  télésiège COMBES
+E 30 28 6  téléski GRAND SERRE
+E 28 30 6  téléski GRAND SERRE
+E 30 63 3  téléski REPLAT
+E 63 30 3  téléski REPLAT
+E 64 30 2  téléski GRAND ALPE
+E 30 64 2  téléski GRAND ALPE
+E 31 32 8  téléski BOIS DES COQS 1-2
+E 32 31 8  téléski BOIS DES COQS 1-2
+E 31 35 9  télésiège PROREL
+E 33 34 9  télésiège AIGUILLETTE
+E 37 35 5  télésiège ROCHER BLANC
+E 37 36 4  télésiège CROIX NORE
+E 40 36 13  télésiège PROREL1-PROREL2
+E 39 38 5 téléski SERRE PELAT
+E 40 70 10 téléski PROREL1-PROREL2
+E 2 45 4 Piste Route des Espagnols
+E 45 2 4 Piste Route des Espagnols
+E 45 1 26 Piste Tabuc
+E 1 45 20 Piste Tabuc
+E 45 69 6 Piste Routes des Espagnols
+E 69 45 6 Piste Routes des Espagnols
+E 69 2 4 Piste Rochamout
+E 2 69 4 Piste Rochamout
+E 44 69 4 Piste Aya
+E 69 44 4 Piste Aya
+E 69 42 8 Piste Rochamout
+E 42 69 8 Piste Rochamout
+E 42 44 4 Piste Aya
+E 44 42 4 Piste Aya
+E 69 46 10 Piste Clot Gaillard
+E 46 69 10 Piste Clot Gaillard
+E 44 46 8 Piste Brettelle Corvaria
+E 46 44 8 Piste Brettelle Corvaria
+E 4 44 8 Piste Aya
+E 44 4 8 Piste Aya
+E 42 3 8 Piste Rochamout
+E 3 42 8 Piste Rochamout
+E 3 4 4 Piste Rochamout
+E 4 3 4 Piste Rochamout
+E 4 3 4 Piste Rochamout
+E 42 4 6 Piste Aya
+E 4 42 6 Piste Aya
+E 46 1 6 Piste Clot Gaillard
+E 1 46 6 Piste Clot Gaillard
+E 43 41 8 Piste Tada
+E 41 43 8 Piste Tada
+E 1 43 12 Piste Rochamout
+E 43 1 12 Piste Rochamout
+E 41 1 6 Piste Rochamout
+E 1 41 3 Piste Rochamout
+E 0 1 12 Piste Cibouit
+E 6 48 8 Piste Yret
+E 48 6 8 Piste Yret
+E 48 5 6 Piste Yret
+E 5 48 6 Piste Yret
+E 5 1 8 Piste Eychauda-Tétras
+E 41 0 24 Piste Rochamout-Combe-Rateau-Pas-de-l'ane
+E 47 8 2 Piste Choucas
+E 8 47 2 Piste Choucas
+E 5 47 6 Piste Eychauda
+E 47 5 6 Piste Eychauda
+E 8 11 18 Piste Cucumelle
+E 53 12 16 Piste Bez
+E 53 11 8 Piste Bez
+E 11 53 8 Piste Bez
+E 16 10 12 Piste Barres
+E 10 16 12 Piste Barres
+E 54 11 10 Piste Goulet
+E 11 54 10 Piste Goulet
+E 55 10 12 Piste Barres
+E 10 55 12 Piste Barres
+E 10 50 4 Piste Goulet
+E 50 10 4 Piste Goulet
+E 51 10 2 Piste Cabane
+E 10 51 2 Piste Cabane
+E 55 56 6 Piste Traverse
+E 56 55 6 Piste Traverse
+E 56 17 2 Piste Traverse
+E 17 56 2 Piste Traverse
+E 11 56 8 Piste Traverse-Goulet
+E 56 11 8 Piste Traverse-Goulet
+E 17 58 6 Piste Super-Draye
+E 58 17 6 Piste Super-Draye
+E 58 19 6 Piste Super-Draye
+E 19 58 6 Piste Super-Draye
+E 19 18 6 Piste Clot-Gauthier
+E 18 19 6 Piste Clot-Gauthier
+E 17 20 20 Piste Isolée
+E 20 17 20 Piste Isolée
+E 18 17 14 Piste Sellettes
+E 27 17 14 Piste Échaillon
+E 17 27 14 Piste Échaillon
+E 21 59 4 Piste Genépi
+E 59 21 4 Piste Genépi
+E 60 21 4 Piste Sellettes
+E 21 60 4 Piste Sellettes
+E 21 17 4 Piste Sellettes
+E 17 21 4 Piste Sellettes
+E 57 21 12 Piste Casse-de-Boeuf
+E 21 57 12 Piste Casse-de-Boeuf
+E 22 57 8 Piste Mareau
+E 57 22 8 Piste Mareau
+E 57 14 8 Piste Casse-de-Boeuf
+E 14 57 8 Piste Casse-de-Boeuf
+E 15 57 8 Piste Mareau
+E 57 15 8 Piste Mareau
+E 14 11 20 Piste Route-Fréjus
+E 11 14 20 Piste Route-Fréjus
+E 22 15 14 Piste Route-Aravet
+E 22 60 10 Piste Marteau
+E 60 22 10 Piste Marteau
+E 22 24 12 Piste Lièvre-Blanc
+E 24 22 12 Piste Lièvre-Blanc
+E 26 60 8 Piste Forêt
+E 60 26 8 Piste Forêt
+E 60 61 10 Piste Marteau
+E 61 60 10 Piste Marteau
+E 61 24 6 Piste Marteau
+E 24 61 6 Piste Marteau
+E 25 62 6 Piste Briance
+E 62 25 6 Piste Briance
+E 62 65 10 Piste Briance
+E 65 62 10 Piste Briance
+E 65 23 16 Piste Briance
+E 23 65 16 Piste Briance
+E 24 23 12 Piste Luc-Alphand
+E 25 31 12 Piste Vallons
+E 31 25 12 Piste Vallons
+E 65 33 12 Piste Celvans
+E 33 65 12 Piste Celvans
+E 33 66 10 Piste Éduits
+E 66 33 10 Piste Éduits
+E 66 31 8 Piste Éduits-Celvans
+E 31 66 8 Piste Celvans-Éduits
+E 67 66 10 Piste Éduits
+E 66 67 10 Piste Éduits
+E 34 33 12 Piste Aiguillette
+E 34 67 4 Piste Éduits
+E 67 34 4 Piste Éduits
+E 67 35 14 Piste Saludes
+E 35 67 14 Piste Saludes
+E 31 67 10 Piste Saludes
+E 67 31 10 Piste Saludes
+E 68 35 12 Piste Myrtilles
+E 35 68 12 Piste Myrtilles
+E 68 31 12 Piste Myrtilles
+E 32 69 4 Piste Eftanis
+E 69 32 4 Piste Eftanis
+E 69 28 8 Piste Eftanis
+E 28 69 8 Piste Eftanis
+E 69 30 10 Piste Vallons
+E 30 69 10 Piste Vallons
+E 28 27 6 Piste Eftanis
+E 27 28 6 Piste Eftanis
+E 26 28 12 Piste Draye
+E 28 26 12 Piste Draye
+E 29 27 4 Piste Combes
+E 27 29 4 Piste Combes
+E 30 29 10 Piste Combes
+E 29 30 10 Piste Combes
+E 31 30 14 Piste 3-Croix
+E 30 31 14 Piste 3-Croix
+E 30 26 8 Piste 3-Croix
+E 26 30 8 Piste 3-Croix
+E 26 24 10 Piste Pylones
+E 29 59 10 Piste Genépi
+E 59 29 10 Piste Genépi
+E 21 56 10 Piste Sellettes
+E 56 21 10 Piste Sellettes
+E 55 21 14 Piste Bois
+E 21 55 14 Piste Bois
+E 7 12 8 Piste Serre-Barbin
+E 12 7 8 Piste Serre-Barbin
+E 2 7 8 Piste Serre-Barbin
+E 7 2 8 Piste Serre-Barbin
+E 13 11 14 Piste Route-Fréjus
+E 39 40 16 Piste Chémin-Vauban
+E 39 70 12 Piste Yéti
+E 70 39 12 Piste Yéti
+E 70 36 14 Piste Grande-Gargouille
+E 36 70 14 Piste Grande-Gargouille
+E 38 36 16 Piste Ch.de-Ronde-Grande-Gargouille
+E 36 38 16 Piste Ch.de-Ronde-Grande-Gargouille
+E 70 40 18 Piste Gde-Gargouille
+E 35 37 10 Piste Chauvert
+E 36 37 10 Piste Pelvoux
+E 39 37 18 Piste Chémin

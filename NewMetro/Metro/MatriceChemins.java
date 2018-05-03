@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class MatriceChemins
 {
-    public  Chemin [][] matrice;
+    public  Arc [][] matrice;
     public  int Taille;
     public ArrayList<Integer>[] succ; // successeurs de chaque sommet
     
@@ -26,7 +26,7 @@ public class MatriceChemins
     public MatriceChemins(int taille)
     {
         
-        this.matrice = new Chemin [taille][taille];
+        this.matrice = new Arc [taille][taille];
         this.Taille =taille;
         this.succ = new ArrayList[taille];
        
@@ -43,7 +43,7 @@ public class MatriceChemins
         {
             for(int j=0; j<this.Taille;j++)
             {
-                this.matrice[i][j] = new Chemin();
+                this.matrice[i][j] = new Arc();
             }
         }
     }
@@ -59,7 +59,7 @@ public class MatriceChemins
         String index;
         int distance, id1, id2;
         String nomArc;
-        Chemin chemin;
+        Arc chemin;
         
         try( FileInputStream fs = new FileInputStream (new File(monFichier));
                 Scanner scanner = new Scanner(fs))
@@ -79,7 +79,7 @@ public class MatriceChemins
                      id2 = scanner.nextInt();
                      distance = scanner.nextInt();
                      nomArc = scanner.nextLine();
-                     matrice[id1][id2]= new Chemin(distance, nomArc);
+                     matrice[id1][id2]= new Arc(distance, nomArc);
                      succ[id1].add(id2);
                 }
             }

@@ -10,7 +10,7 @@ import java.util.Scanner;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Chemin
+public class Arc
 {
     public int distance;
     
@@ -23,13 +23,13 @@ public class Chemin
      * Constructor for objects of class Chemin
      */
     
-    public Chemin()
+    public Arc()
     {
         this.distance = 0;
         this.nomArc="";
     }
     
-    public Chemin(int distance, String nomArc)
+    public Arc(int distance, String nomArc)
     {
         this.distance = distance;
         this.nomArc= nomArc;
